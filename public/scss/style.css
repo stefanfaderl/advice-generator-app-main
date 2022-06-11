@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  color: hsl(193deg, 38%, 86%);
+}
+
+h1 {
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-weight: 400;
+  background-color: #202632;
+}
+
+main {
+  margin: auto 0;
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #313a49;
+}
+.container img {
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+.container button {
+  left: 50%;
+  border: none;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, 0%);
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: hsl(150deg, 100%, 66%);
+  background-image: url(/images/icon-dice.svg);
+}
+.container button:hover, .container button:focus {
+  filter: drop-shadow(0px 0px 15px hsl(150deg, 100%, 66%));
+}
+
+footer {
+  padding: 40px 10px;
+  width: 100%;
+  background-color: #313a49;
+}
+footer .attribution {
+  font-size: 16px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(150deg, 100%, 66%);
+}/*# sourceMappingURL=style.css.map */
