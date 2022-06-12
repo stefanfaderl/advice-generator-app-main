@@ -9,10 +9,10 @@ diceBtn?.addEventListener('click', e => {
     updateAdvice();
 });
 
-(async function () {
+const showAdvice = (async function () {
     try {
         const advice = await getAdvice(adviceApiQuery);
-        if (h1Tag) h1Tag.innerText = `#${advice.slip.id}`;
+        if (h1Tag) h1Tag.innerText = `Advice #${advice.slip.id}`;
         if (pTag) pTag.innerText = `"${advice.slip.advice}"`;
     } catch (error) {
         console.error(error);
@@ -23,6 +23,9 @@ async function updateAdvice() {
     try {
         if (h1Tag) h1Tag.innerText = ``;
         if (pTag) pTag.innerText = ``;
+        const newAdvice = await getAdvice(adviceApiQuery);
+        if (h1Tag) h1Tag.innerText = `Advice #${newAdvice.slip.id}`;
+        if (pTag) pTag.innerText = `"${newAdvice.slip.advice}"`;
     } catch (error) {
         console.error(error);
     }

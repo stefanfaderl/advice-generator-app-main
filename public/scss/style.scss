@@ -14,7 +14,11 @@ $BoxColor: #313a49;
 }
 
 h1 {
+  color: $primary-color;
   text-align: center;
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 html {
@@ -26,6 +30,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   font-weight: 400;
+  font-family: "manrope";
   background-color: $BackgroundColor;
 }
 
@@ -33,18 +38,33 @@ main {
   margin: auto 0;
 }
 
+p {
+  text-align: center;
+  margin: 25px 0px;
+  font-weight: 800;
+  font-size: 26px;
+}
+
 .content-wrapper {
   padding: 20px;
 }
 
 .container {
+  display: block;
   position: relative;
   padding: 30px;
   border-radius: 10px;
   background-color: $BoxColor;
+  max-width: 400px;
+  margin: auto;
   img {
+    display: block;
+    margin: auto;
     margin-bottom: 30px;
     max-width: 100%;
+  }
+  .img-desktop {
+    display: none;
   }
   button {
     left: 50%;
@@ -59,8 +79,7 @@ main {
     background-repeat: no-repeat;
     background-color: $primary-color;
     background-image: url(/images/icon-dice.svg);
-    &:hover,
-    &:focus {
+    &:hover {
       filter: drop-shadow(0px 0px 15px $primary-color);
     }
   }
@@ -68,14 +87,27 @@ main {
 
 footer {
   //margin-top: auto;
-  padding: 40px 10px;
-  width: 100%;
+  padding: 20px 60px;
+  max-width: 100%;
   background-color: $BoxColor;
   .attribution {
-    font-size: 16px;
+    padding: 5px;
+    font-size: 14px;
     text-align: center;
+    line-height: 30px;
     a {
       color: $primary-color;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    .img-mobile {
+      display: none;
+    }
+    .img-desktop {
+      display: block;
     }
   }
 }

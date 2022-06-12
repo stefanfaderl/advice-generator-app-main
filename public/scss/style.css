@@ -7,7 +7,11 @@
 }
 
 h1 {
+  color: hsl(150deg, 100%, 66%);
   text-align: center;
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
 html {
@@ -19,6 +23,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   font-weight: 400;
+  font-family: "manrope";
   background-color: #202632;
 }
 
@@ -26,19 +31,34 @@ main {
   margin: auto 0;
 }
 
+p {
+  text-align: center;
+  margin: 25px 0px;
+  font-weight: 800;
+  font-size: 26px;
+}
+
 .content-wrapper {
   padding: 20px;
 }
 
 .container {
+  display: block;
   position: relative;
   padding: 30px;
   border-radius: 10px;
   background-color: #313a49;
+  max-width: 400px;
+  margin: auto;
 }
 .container img {
+  display: block;
+  margin: auto;
   margin-bottom: 30px;
   max-width: 100%;
+}
+.container .img-desktop {
+  display: none;
 }
 .container button {
   left: 50%;
@@ -54,19 +74,30 @@ main {
   background-color: hsl(150deg, 100%, 66%);
   background-image: url(/images/icon-dice.svg);
 }
-.container button:hover, .container button:focus {
+.container button:hover {
   filter: drop-shadow(0px 0px 15px hsl(150deg, 100%, 66%));
 }
 
 footer {
-  padding: 40px 10px;
-  width: 100%;
+  padding: 20px 60px;
+  max-width: 100%;
   background-color: #313a49;
 }
 footer .attribution {
-  font-size: 16px;
+  padding: 5px;
+  font-size: 14px;
   text-align: center;
+  line-height: 30px;
 }
 footer .attribution a {
   color: hsl(150deg, 100%, 66%);
+}
+
+@media screen and (min-width: 1200px) {
+  .container .img-mobile {
+    display: none;
+  }
+  .container .img-desktop {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
