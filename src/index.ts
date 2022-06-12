@@ -15,7 +15,7 @@ const showAdvice = (async function () {
         if (h1Tag) h1Tag.innerText = `Advice #${advice.slip.id}`;
         if (pTag) pTag.innerText = `"${advice.slip.advice}"`;
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 })();
 
@@ -27,7 +27,7 @@ async function updateAdvice() {
         if (h1Tag) h1Tag.innerText = `Advice #${newAdvice.slip.id}`;
         if (pTag) pTag.innerText = `"${newAdvice.slip.advice}"`;
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 };
 
